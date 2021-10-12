@@ -1,0 +1,36 @@
+# Show all Bootcamp
+GET http://localhost:8888/api/v1/courses?page=1&limit=1
+
+###
+
+# Find a Bootcamp
+GET http://localhost:8888/api/v1/courses/615ba2d15f837cff1098a5ef
+
+### 
+
+# Create a Bootcamp
+POST http://localhost:8888/api/v1/bootcamps/61617956c87fd53ddcd2d4f8/courses
+Content-Type: application/json
+
+{
+    "title": "ModernTech Bootcamp 2",
+    "description": "Get started building mobile applications for IOS using Swift and other tools",
+    "weeks": "8",
+    "tuition": 1000,
+    "minimumSkill": "intermediate",
+    "sholarshipAvailable": false
+}
+
+
+###
+
+# Find a Bootcamp
+DELETE http://localhost:8888/api/v1/courses/6161b3a081bf6b8d223cf156
+
+
+
+
+
+
+
+

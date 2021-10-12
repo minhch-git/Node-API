@@ -1,0 +1,36 @@
+{
+  "name": "resfult_api_node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/minhchiuit/Node_API.git",
+  "author": "minhchiu <minhch.vn@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn run build && node ./build/src/server.js",
+    "start:dev": "nodemon --exec babel-node ./src/server.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel ./src -d ./build/src",
+    "build": "yarn run clean && yarn run build-babel",
+    "insert:data": "babel-node ./test_api/addData.js"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "http-status": "^1.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.8",
+    "morgan": "^1.10.0",
+    "node-geocoder": "^3.27.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "nodemon": "^2.0.13"
+  }
+}

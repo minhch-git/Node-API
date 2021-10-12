@@ -1,0 +1,36 @@
+Screen 2:
+Trang Thong bao
+    * Load thong bao:
+        + paginate
+
+
+
+Screen 4
+Trang chu khach hang:
+    * Load Ten:
+        + findById
+    * Thong bao:
+        + paginate
+    * San Pham:
+        + paginate
+    * Tin tuc
+        + paginate
+
+
+Screen 5:
+Tao don cong viec:
+    + Tuyen Dung
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+# Show all Bootcamp
+GET http://localhost:8888/api/v1/bootcamps?page=2&limit=3&avergetCost[gt]=2100&select=name,description&sort=-name
+
+###
+
+# Find a Bootcamp
+GET http://localhost:8888/api/v1/bootcamps/61617956c87fd53ddcd2d4f8
+
+###
+
+# Get bootcamps by Distance
+GET http://localhost:8888/api/v1/bootcamps/radius/0210/200
+
+### 
+
+# Create a Bootcamp
+POST http://localhost:8888/api/v1/bootcamps
+Content-Type: application/json
+
+{
+   "name": "Devworks Bootcamp DN",
+    "description": "Devworks is a full stack Javascript Bootcamp located in the heart of Boston that focuses on the technologies you need to get a high paying job as a web developer",
+    "website": "https://devworks.com",
+    "phone": "(111) 111-1111",
+    "email":"enroll@devworks.com",
+    "address":"14 Doãn Uẩn, Khuê Mỹ, Ngũ Hành Sơn,Đà Nẵng, Việt Nam",
+    "careers":["Web Development", "UI/UX", "Business"],
+    "housing": true,
+    "jobAssistance": true,
+    "jobGuarantee": false,
+    "acceptGi": true
+}
+###
+
+# Upadate a Bootcamp
+PUT http://localhost:8888/api/v1/bootcamps/615ba2d15f837cff1098a5ef
+Content-Type: application/json
+
+{
+    "name": "Devworks Bootcamp 2",
+    "description": "Devworks is a full stack Javascript Bootcamp located in the heart of Boston that focuses on the technologies you need to get a high paying job as a web developer",
+    "website": "https://devworks.com",
+    "phone": "(222) 222-2222"
+}
+
+# Delete a Bootcamp
+DELETE http://localhost:8888/api/v1/bootcamps/615b3228ac1e703e583d3059s
+
+###
