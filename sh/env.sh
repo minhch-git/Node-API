@@ -21,11 +21,11 @@ JWT_VERIFY_EMAIL_EXPIRATION_MINUTES=10
 
 # SMTP configuration options for the email service
 # For testing, you can use a fake SMTP service like Ethereal: https://ethereal.email/create
-SMTP_HOST=smpt.gmail.com
-SMTP_PORT=587
-SMTP_USERNAME=minhch.vn@gmail.com
-SMTP_PASSWORD=Minh.it.01
-EMAIL_FROM=minhch.vn@gmail.com
+export SMTP_HOST=smpt.gmail.com
+export SMTP_PORT=587
+export SMTP_USERNAME=minhch.vn@gmail.com
+export SMTP_PASSWORD=Minh.it.01
+export EMAIL_FROM=minhch.vn@gmail.com
 
 # Geocoder
 export GEOCODER_PROVIDER=mapquest
