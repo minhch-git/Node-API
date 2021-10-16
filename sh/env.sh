@@ -3,7 +3,8 @@ export NODE_ENV=development
 export PORT=8888
 
 # Mongodb URI
-export MONGO_URI="mongodb+srv://minhchiu:Minh.it.01@cluster0.xsf7s.mongodb.net/devcamper_api?retryWrites=true&w=majority"
+# export MONGO_URI="mongodb+srv://minhchiu:Minh.it.01@cluster0.xsf7s.mongodb.net/devcamper_api?retryWrites=true&w=majority"
+export MONGO_URI="mongodb://localhost/node-api"
 
 # JWT
 # JWT secret key

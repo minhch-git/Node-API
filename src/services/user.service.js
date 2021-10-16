@@ -10,7 +10,6 @@ class UserService {
         return User.create(body)
     }
 
-
     /**
      * Find user by id
      * @param {ObjectId} id

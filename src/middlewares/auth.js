@@ -13,7 +13,6 @@ const requiredLoggedIn = async (req, res, next) => {
 	// else if (req.cookies.token) {
 	// 	token = req.cookies.token
 	// }
-
 	if (!token) {
 		return next(new ErrorResponse('Not authorization to access this route', 401))
 	}

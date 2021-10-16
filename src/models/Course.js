@@ -16,6 +16,11 @@ const CourseSchema = new Schema(
       ref: "Bootcamp",
       required: true,
     },
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
     description: {
       type: String,
       required: [true, "Please add a description"],
@@ -58,7 +63,7 @@ CourseSchema.statics = {
     ])
     try {
       await this.model('Bootcamp').findByIdAndUpdate(bootcampId, {
-        averageCost: Math.ceil(obj[0].averageCost / 10) * 10
+        averageCost: Math.ceil(obj / 10) * 10
       })
     } catch (error) {
       console.log(error)
