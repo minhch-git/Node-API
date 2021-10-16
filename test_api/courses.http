@@ -1,5 +1,5 @@
 # Show all Bootcamp
-GET http://localhost:8888/api/v1/courses?page=1&limit=1
+GET http://localhost:8888/api/v1/users?page=1&limit=1
 
 ###
 

@@ -1,5 +1,5 @@
 # Show all Bootcamp
-GET http://localhost:8888/api/v1/bootcamps?page=2&limit=3&avergetCost[gt]=2100&select=name,description&sort=-name
+GET http://localhost:8888/api/v1/bootcamps?&avergetCost[gt]=2100&select=name,description&sort=-name
 
 ###
 
