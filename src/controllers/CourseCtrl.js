@@ -42,17 +42,25 @@ class CourseCtrl {
    */
   async addCourse(req, res, next) {
     req.body.bootcamp = req.params.bootcampId
+    req.body.user = req.user.id 
 
     const bootcamp = await bootcampService.findById(req.params.bootcampId)
     if (!bootcamp) {
       return next(new ErrorResponse(`No bootcamp with the id of ${req.params.id}`, 404))
     }
+    // Make sure user is bootcamp owner 
+    if (bootcamp.user.toString() !== req.user.id && req.user.role !== 'admin') {
+      return next(new ErrorResponse(`User ${req.user.id} is not authorized to ad a course to bootcamp ${bootcamp._id}`, 404))
+    }    
+
     const course = await courseService.create(req.body)
 
     res.status(200).json({
       success: true,
       data: course
     })
+
+
   }
 
   /**
@@ -64,6 +72,11 @@ class CourseCtrl {
     if (!course) {
       return next(new ErrorResponse(`No course with the id of ${req.params.id}`, 404))
     }
+      // Make sure user is bootcamp owner 
+    if (bootcamp.user.toString() !== req.user.id && req.user.role !== 'admin') {
+      return next(new ErrorResponse(`User ${id} is not authorized to ad a course to bootcamp ${bootcamp._id}`, 404))
+    }    
+
     course = await courseService.findByIdAndUpdate(req.params.id, req.body)
 
     res.status(200).json({
@@ -81,6 +94,11 @@ class CourseCtrl {
     if(!course) {
       return next(new ErrorResponse(`No course with the id of ${req.params.id}`, 404))
     }
+      // Make sure user is bootcamp owner 
+    if (bootcamp.user.toString() !== req.user.id && req.user.role !== 'admin') {
+      return next(new ErrorResponse(`User ${id} is not authorized to ad a course to bootcamp ${bootcamp._id}`, 404))
+    }    
+
     res.status(200).json({
       success: true,
       data: {}
