@@ -7,7 +7,7 @@ class UserService {
      * @returns promise
      */
     create(body) {
-        return User.create(body)
+        return User.create(body);
     }
 
     /**
@@ -16,7 +16,7 @@ class UserService {
      * @returns promise
      */
     findById(id) {
-        return User.findById(id)
+        return User.findById(id);
     }
 
     /**
@@ -25,7 +25,18 @@ class UserService {
      * @returns promise
      */
     findByEmail(email) {
-        return User.findOne({ email })
+        return User.findOne({
+            email
+        });
+    }
+
+    /**
+     * Find one user by object
+     * @param {Object} object
+     * @returns promise
+     */
+    findOne(object) {
+        return User.findOne(object);
     }
 }
 export default new UserService();
